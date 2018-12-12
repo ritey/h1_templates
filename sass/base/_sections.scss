@@ -1,0 +1,63 @@
+/* Sections */
+
+section {
+	
+	
+	&.grey {
+		background: $grey-light;
+	}
+	
+	&.green {
+		background: $green;
+		color: $white;
+	}
+	
+	&.black {
+		background: $black;
+		color: $white;
+	}
+
+	&.reverse {
+
+		.row {
+			flex-direction: column-reverse;
+
+			@include media-breakpoint-up(md) {
+				flex-direction: row;
+			}
+		}
+	}
+
+	&.img-bg {
+		background-size: cover;
+		background-position: center center;
+		min-height: 20em;
+	}
+
+	img {
+
+		&.align-base {
+			margin-bottom: -3rem;
+		}
+	}
+
+	.pad-left-desk {
+
+		@include media-breakpoint-up(md) {
+			padding-left: 2em;
+		}
+		@include media-breakpoint-up(lg) {
+			padding-left: 4em;
+		}
+	}
+
+	.pad-right-desk {
+
+		@include media-breakpoint-up(md) {
+			padding-right: 2em;
+		}
+		@include media-breakpoint-up(lg) {
+			padding-right: 4em;
+		}
+	}
+}

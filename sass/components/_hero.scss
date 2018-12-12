@@ -1,0 +1,169 @@
+/* Hero */
+
+.hero-container {
+	background-color: $off-white;
+	position: relative;
+	width: 100%;
+
+	.arrow {
+    width: 0;
+    height: 0;
+    border-left: 30px solid transparent;
+    border-right: 30px solid transparent;
+    border-top: 30px solid $off-white;
+    position: absolute;
+    bottom: -30px;
+    left: 50%;
+    margin-left: -25px;
+	}
+
+	.hero {
+		padding-top: 2em;
+		padding-bottom: 2em;
+		z-index: 0;
+		position: relative;
+
+		h1, h2 {
+			font-weight: 300;
+		}
+
+		p, small {
+			font-weight: 300;
+		}
+
+		img {
+
+			&.hero {
+				margin: 1.5rem 0 0;
+			}
+		}
+
+		@include media-breakpoint-up(sm) {
+
+			p {
+				width: 60%;
+			}
+
+			.row {
+
+				p {
+					width: 100%;
+				}
+			}
+		}
+		@include media-breakpoint-up(md) {
+
+			h2 {
+				font-size: 1.5rem;
+			}
+			p {
+				width: 50%;
+			}
+		}
+		@include media-breakpoint-up(lg) {
+
+			h1 {
+				font-size: 2rem;
+			}
+			h2 {
+				font-size: 2.25rem;
+			}
+		}
+	}
+
+	&.homepage {
+		background-image: url(../images/header-bg-mb.jpg);
+		background-repeat: repeat-y;
+		background-size: 130% auto;
+		background-position: center;
+
+		@include media-breakpoint-up(sm) {
+			background-image: url(../images/header-bg-desk-right.jpg);
+			background-repeat: repeat-x;
+			background-size: auto 100%;
+		}
+
+		.hero-desk-left-bg {
+
+			@include media-breakpoint-up(sm) {
+				position: absolute;
+				width: 50%;
+				height: 100%;
+				background-image: url(../images/header-bg-desk-left.jpg);
+				background-repeat: repeat-x;
+				background-size: auto 100%;
+				z-index: 0;
+			}
+		}
+
+		.hero {
+			background-image: url(../images/homepage-hero.jpg);
+			background-repeat: no-repeat;
+			background-size: 130% auto;
+			background-position: bottom center;
+			padding-bottom: 3em;
+			padding-top: 1em;
+
+			@include media-breakpoint-up(sm) {
+				background-size: auto 100%;
+				padding-top: 2em;
+			}
+			@include media-breakpoint-up(md) {
+				padding-bottom: 6em;
+			}
+
+			.icon-logo {
+				width: 6.25rem;
+				height: 5rem;
+				margin-bottom: 1em;
+
+				@include media-breakpoint-up(sm) {
+					margin-bottom: 2em;
+				}
+				@include media-breakpoint-up(md) {
+					width: 9.375rem;
+					height: 6.25rem;
+					margin-top: 1em;
+					margin-bottom: 4em;
+				}
+			}
+
+			p, small {
+
+				span {
+
+					span {
+						font-weight: 600;
+					}
+				}
+			}
+
+			.icon-arrow-down {
+				width: 3.75em;
+				height: 2.2em;
+				fill: rgba(255,255,255,.5);
+
+				@include media-breakpoint-up(md) {
+					margin-top: 1em;
+				}
+				@include media-breakpoint-up(lg) {
+					width: 6.25em;
+					height: 3.4em;
+				}
+			}
+			@include media-breakpoint-up(md) {
+
+				p {
+					margin-bottom: 2em;
+				}
+			}
+			@include media-breakpoint-up(lg) {
+
+				p {
+					font-size: 1.4rem;
+					margin-top: 0.4em;
+				}
+			}
+		}
+	}
+}

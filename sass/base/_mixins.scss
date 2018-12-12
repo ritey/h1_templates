@@ -1,0 +1,25 @@
+/* Mixins */
+
+/* Border radius */
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius:    $radius;
+  -ms-border-radius:     $radius;
+  border-radius:         $radius;
+}
+
+
+/* Hide only visually, but have it available for screenreaders: by Jon Neal.
+  www.webaim.org/techniques/css/invisiblecontent/  &  j.mp/visuallyhidden */
+
+@mixin visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px; 
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px !important;
+}

@@ -1,0 +1,14 @@
+/* Body */
+
+body {
+	color: $black;
+	font-family: $font-family-base;
+	line-height: 1.25;
+}
+
+.container {
+	
+	@include media-breakpoint-up(lg) {
+		max-width: 62rem;
+	}
+}

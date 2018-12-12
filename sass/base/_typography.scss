@@ -1,0 +1,121 @@
+/* Typography */
+
+h1 {
+	font-size: 1.5rem;
+	font-weight: 300;
+}
+h2 {
+	font-size: 1.25rem;
+	font-weight: 300;
+}
+
+p {
+	font-size: 1rem;
+	font-weight: 300;
+	line-height: 1.25;
+
+	&.large {
+		font-size: 1.25rem;
+	}
+}
+
+ul {
+		
+	&.tick-list {
+		color: $green-dk;
+		list-style: none;
+		margin: 0;
+		padding: 0;
+
+		li {
+			padding-bottom: 0.25em;
+			padding-left: 2em;
+			position: relative;
+
+			span {
+				position: absolute;
+				top: 0;
+				left: 0;
+
+				svg {
+					display: inline-block;
+					fill: $lime;
+					width: 1.25em;
+					height: 1.25em;
+					padding: 0.25em;
+					background: $black;
+					@include border-radius(50%);
+				}
+			}
+		}
+	}
+}
+
+strong {
+	
+	&.green {
+		color: $green;
+	}
+	&.lime {
+		color: $lime;
+	}
+}
+
+
+$highlight-padding: 0.25em;
+
+.highlight-this {
+  line-height: $highlight-padding + 1em;
+  
+  .highlight {
+    display: inline;
+    background: $black;
+    color: $white; 
+    padding: $highlight-padding*1.5 $highlight-padding $highlight-padding;
+    box-decoration-break: clone;
+    position: relative;
+    left: $highlight-padding;
+    padding-left: 0;
+    box-shadow: $highlight-padding 0 0 $black, $highlight-padding*-1 0 0 $black;
+
+	  &.lime {
+	    background: $lime;
+	    color: $black; 
+	    box-shadow: $highlight-padding 0 0 $lime, $highlight-padding*-1 0 0 $lime;
+	  }
+
+	  &.green {
+	    background: $green;
+	    color: $white; 
+	    box-shadow: $highlight-padding 0 0 $green, $highlight-padding*-1 0 0 $green;
+	  }
+
+	  &.white {
+	    background: $white;
+	    color: $black; 
+	    box-shadow: $highlight-padding 0 0 $white, $highlight-padding*-1 0 0 $white;
+	  }
+  }
+
+  &.double {
+
+  	.highlight {
+	    
+	    &:first-child {
+	    	padding-bottom: .1em;
+	    }
+	    
+	    &:last-child {
+	    	padding-top: .15em;
+	    }
+	  }
+  }
+}
+
+.mob-break {
+	
+	@include media-breakpoint-up(sm) {
+		display: none;
+	}
+}
+

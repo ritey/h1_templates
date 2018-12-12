@@ -1,0 +1,20 @@
+/* Article list */
+
+.article-list {
+	
+	img {
+		width: 100%;
+	}
+
+	p {
+		font-weight: 300;
+	}
+
+	a {
+
+		&.button {
+			font-size: 1rem;
+			font-weight: 300;
+		}
+	}
+}
