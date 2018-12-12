@@ -1,0 +1,25 @@
+/* Member number */
+
+.member-number {
+	background: url(../images/globe.png) no-repeat center center;
+	background-size: auto 85%;
+	width: 100%;
+	height: 23rem;
+	text-align: center;
+	
+	span {
+		text-transform: uppercase;
+		display: block;
+
+		&:first-child {
+			font-size: 5rem;
+			font-weight: 600;
+			padding-top: 9rem;
+		}
+
+		&:last-child {
+			font-weight: 300;
+			font-size: 1.25rem;
+		}
+	}
+}

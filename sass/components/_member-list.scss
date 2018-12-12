@@ -1,0 +1,27 @@
+/* Member list */
+
+.member-list {
+
+	.shadow {
+		
+		@include media-breakpoint-up(sm) {
+			width: 100%;
+		}
+	}
+
+	ul {
+
+		li {
+			padding-bottom: .5rem;
+
+			&:last-child {
+				padding-bottom: 0;
+			}
+
+			svg {
+				fill: $grey-light;
+				margin-right: .5rem;
+			}
+		}
+	}
+}

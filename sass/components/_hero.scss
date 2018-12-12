@@ -15,6 +15,10 @@
     bottom: -30px;
     left: 50%;
     margin-left: -25px;
+
+    &.lime {
+    	border-top: 30px solid $lime;
+    }
 	}
 
 	.hero {
@@ -69,6 +73,13 @@
 				font-size: 2.25rem;
 			}
 		}
+	}
+
+	.hero-highlight {
+		background-color: $lime;
+		position: relative;
+		width: 100%;
+		padding: 2rem 1rem 1rem;
 	}
 
 	&.homepage {

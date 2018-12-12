@@ -1,0 +1,87 @@
+/* Forms */
+
+form {
+	
+	label {
+
+		&.hide {
+			@include visuallyhidden;
+		}
+	}
+
+	@include placeholder {
+	  color: white;
+	}
+
+	input, select, textarea {
+		font-family: $font-family-base;
+		font-weight: 300;
+	}
+
+	input {
+		border: 1px solid $black;
+		background: $black;
+		padding: .4rem 1rem .25rem 1rem;
+		width: 100%;
+		color: $white;
+		text-transform: uppercase;
+
+		&:focus {
+		  outline:none;
+		}
+
+		&:disabled {
+			background: $grey-light;
+			border: 1px solid $grey-light;
+		}
+
+		&[type="submit"] {
+			background: $lime;
+			color: $black;
+			border: 1px solid $lime;
+			width: auto;
+
+			&.search-icon {
+				background: $lime url(../images/search.svg) no-repeat center center;
+				background-size: auto 70%;
+				text-indent: -2000em;
+				padding: .4rem 1.25rem .25rem 1.25rem;
+			}
+
+			&:disabled {
+				opacity: 0.5;
+			}
+		}
+	}
+	
+	.styled-select {
+		width: 100%;
+		overflow: hidden;
+		background: $black url(../images/arrow-down.svg) no-repeat right center;
+		background-size: auto 30%;
+		border: 1px solid $black;
+		border-right: 1rem solid $black;
+
+		select {
+			background: transparent;
+			width: 110%;
+			padding: .4rem 1rem .25rem 1rem;
+			border: 0;
+			-webkit-appearance: none !important;
+			color: $white;
+			text-transform: uppercase;
+
+			&:focus {
+			  outline:none;
+			}
+		}
+
+		option {
+			outline: none;
+		}
+	}
+
+	.form-flex {
+		display: flex;
+	}
+}

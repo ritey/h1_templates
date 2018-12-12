@@ -16,6 +16,7 @@
 /* Border radius */
 /* Hide only visually, but have it available for screenreaders: by Jon Neal.
   www.webaim.org/techniques/css/invisiblecontent/  &  j.mp/visuallyhidden */
+/* Placeholder text colour */
 /* Body */
 body {
   color: #221f1f;
@@ -153,7 +154,7 @@ footer {
 
 /* Sections */
 section.grey {
-  background: #ddd; }
+  background: #ccc; }
 section.green {
   background: #3cab49;
   color: #FFF; }
@@ -200,30 +201,32 @@ p {
   p.large {
     font-size: 1.25rem; }
 
-ul.tick-list {
-  color: #006838;
-  list-style: none;
-  margin: 0;
-  padding: 0; }
-  ul.tick-list li {
-    padding-bottom: 0.25em;
-    padding-left: 2em;
-    position: relative; }
-    ul.tick-list li span {
-      position: absolute;
-      top: 0;
-      left: 0; }
-      ul.tick-list li span svg {
-        display: inline-block;
-        fill: #a8ff00;
-        width: 1.25em;
-        height: 1.25em;
-        padding: 0.25em;
-        background: #221f1f;
-        -webkit-border-radius: 50%;
-        -moz-border-radius: 50%;
-        -ms-border-radius: 50%;
-        border-radius: 50%; }
+ul {
+  line-height: 1.25; }
+  ul.tick-list {
+    color: #006838;
+    list-style: none;
+    margin: 0;
+    padding: 0; }
+    ul.tick-list li {
+      padding-bottom: 0.25em;
+      padding-left: 2em;
+      position: relative; }
+      ul.tick-list li span {
+        position: absolute;
+        top: 0;
+        left: 0; }
+        ul.tick-list li span svg {
+          display: inline-block;
+          fill: #a8ff00;
+          width: 1.25em;
+          height: 1.25em;
+          padding: 0.25em;
+          background: #221f1f;
+          -webkit-border-radius: 50%;
+          -moz-border-radius: 50%;
+          -ms-border-radius: 50%;
+          border-radius: 50%; }
 
 strong.green {
   color: #3cab49; }
@@ -307,6 +310,73 @@ a.button:focus, a.button:hover {
   width: 130px;
   height: 31px; }
 
+/* Forms */
+form label.hide {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px !important; }
+form ::-webkit-input-placeholder {
+  color: white; }
+form :-moz-placeholder {
+  color: white; }
+form ::-moz-placeholder {
+  color: white; }
+form :-ms-input-placeholder {
+  color: white; }
+form input, form select, form textarea {
+  font-family: "Josefin Sans";
+  font-weight: 300; }
+form input {
+  border: 1px solid #221f1f;
+  background: #221f1f;
+  padding: .4rem 1rem .25rem 1rem;
+  width: 100%;
+  color: #FFF;
+  text-transform: uppercase; }
+  form input:focus {
+    outline: none; }
+  form input:disabled {
+    background: #ccc;
+    border: 1px solid #ccc; }
+  form input[type="submit"] {
+    background: #a8ff00;
+    color: #221f1f;
+    border: 1px solid #a8ff00;
+    width: auto; }
+    form input[type="submit"].search-icon {
+      background: #a8ff00 url(../images/search.svg) no-repeat center center;
+      background-size: auto 70%;
+      text-indent: -2000em;
+      padding: .4rem 1.25rem .25rem 1.25rem; }
+    form input[type="submit"]:disabled {
+      opacity: 0.5; }
+form .styled-select {
+  width: 100%;
+  overflow: hidden;
+  background: #221f1f url(../images/arrow-down.svg) no-repeat right center;
+  background-size: auto 30%;
+  border: 1px solid #221f1f;
+  border-right: 1rem solid #221f1f; }
+  form .styled-select select {
+    background: transparent;
+    width: 110%;
+    padding: .4rem 1rem .25rem 1rem;
+    border: 0;
+    -webkit-appearance: none !important;
+    color: #FFF;
+    text-transform: uppercase; }
+    form .styled-select select:focus {
+      outline: none; }
+  form .styled-select option {
+    outline: none; }
+form .form-flex {
+  display: flex; }
+
 /* Components */
 /* Hero */
 .hero-container {
@@ -323,6 +393,8 @@ a.button:focus, a.button:hover {
     bottom: -30px;
     left: 50%;
     margin-left: -25px; }
+    .hero-container .arrow.lime {
+      border-top: 30px solid #a8ff00; }
   .hero-container .hero {
     padding-top: 2em;
     padding-bottom: 2em;
@@ -349,6 +421,11 @@ a.button:focus, a.button:hover {
         font-size: 2rem; }
       .hero-container .hero h2 {
         font-size: 2.25rem; } }
+  .hero-container .hero-highlight {
+    background-color: #a8ff00;
+    position: relative;
+    width: 100%;
+    padding: 2rem 1rem 1rem; }
   .hero-container.homepage {
     background-image: url(../images/header-bg-mb.jpg);
     background-repeat: repeat-y;
@@ -582,6 +659,72 @@ a.button:focus, a.button:hover {
   .carousel.news .slick-slide .shadow h1 {
     font-size: 2rem; } }
 
+/* List */
+.list div[class^="col"] {
+  padding-bottom: 1.5rem; }
+.list .shadow {
+  width: 75%;
+  height: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  background: #221f1f; }
+  @media (min-width: 768px) {
+    .list .shadow {
+      width: 100%; } }
+  .list .shadow .icon-link {
+    position: absolute;
+    top: 10px;
+    right: 5px;
+    z-index: 1;
+    background: #FFF;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    border-radius: 50%; }
+    .list .shadow .icon-link svg {
+      width: 1.75em;
+      height: 1.75em; }
+    .list .shadow .icon-link.share svg {
+      fill: #3cab49; }
+    .list .shadow .icon-link.country-flag {
+      top: 2.75rem; }
+  .list .shadow h1 {
+    font-weight: 600;
+    font-size: 1.5rem; }
+  .list .shadow img {
+    width: 100%;
+    border-top: 5px solid #3cab49; }
+  .list .shadow .bg-image {
+    width: 100%;
+    height: 11em;
+    background-repeat: none;
+    background-size: cover;
+    border-top: 5px solid #3cab49; }
+  .list .shadow .copy {
+    color: #FFF; }
+    .list .shadow .copy .icon-calendar {
+      width: 1em;
+      height: 1.125em;
+      fill: #ccc; }
+  .list .shadow p, .list .shadow li {
+    font-weight: 300; }
+  .list .shadow ul {
+    list-style: none;
+    margin-left: 0;
+    padding-left: 0; }
+  .list .shadow a.button {
+    font-size: 1rem;
+    font-weight: 300; }
+  .list .shadow.green {
+    background: #006838; }
+  .list .shadow.white {
+    background: #FFF; }
+    .list .shadow.white h1 {
+      color: #006838; }
+    .list .shadow.white .copy {
+      color: #221f1f; }
+
 /* Article list */
 .article-list img {
   width: 100%; }
@@ -592,55 +735,17 @@ a.button:focus, a.button:hover {
   font-weight: 300; }
 
 /* News list */
-.news-list div[class^="col"] {
-  padding-bottom: 1.5rem; }
-.news-list .shadow {
-  width: 75%;
-  height: 100%;
-  margin-left: auto;
-  margin-right: auto;
-  position: relative;
-  background: #221f1f; }
-  @media (min-width: 768px) {
-    .news-list .shadow {
-      width: 100%; } }
-  .news-list .shadow .share {
-    position: absolute;
-    top: 10px;
-    right: 5px;
-    z-index: 1;
-    background: #FFF;
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
-    -ms-border-radius: 50%;
-    border-radius: 50%; }
-    .news-list .shadow .share svg {
-      fill: #3cab49;
-      width: 1.75em;
-      height: 1.75em; }
-.news-list h1 {
-  font-weight: 600;
-  font-size: 1.5rem; }
-.news-list img {
-  width: 100%;
-  border-top: 5px solid #3cab49; }
-.news-list .bg-image {
-  width: 100%;
-  height: 11em;
-  background-repeat: none;
-  background-size: cover;
-  border-top: 5px solid #3cab49; }
-.news-list .copy {
-  color: #FFF; }
-  .news-list .copy .icon-calendar {
-    width: 1em;
-    height: 1.125em;
-    fill: #ddd; }
-.news-list p {
-  font-weight: 300; }
-.news-list a.button {
-  font-size: 1rem;
-  font-weight: 300; }
+/* Member list */
+@media (min-width: 576px) {
+  .member-list .shadow {
+    width: 100%; } }
+.member-list ul li {
+  padding-bottom: .5rem; }
+  .member-list ul li:last-child {
+    padding-bottom: 0; }
+  .member-list ul li svg {
+    fill: #ccc;
+    margin-right: .5rem; }
 
 /* Pagination */
 .pagination {
@@ -679,12 +784,16 @@ a.button:focus, a.button:hover {
   padding: .35rem 1rem .25rem 1rem;
   float: right; }
   .dropdown.sort a:hover, .dropdown.sort a:focus {
-    background: #221f1f !important; }
+    background: #221f1f !important;
+    box-shadow: none !important; }
   .dropdown.sort a svg {
     fill: #a8ff00;
     float: right;
     margin-top: .2rem;
     margin-left: .5rem; }
+    @media (min-width: 768px) {
+      .dropdown.sort a svg {
+        margin-left: 1.5rem; } }
 .dropdown.sort .dropdown-menu {
   border: 0;
   -webkit-border-radius: 0;
@@ -693,3 +802,21 @@ a.button:focus, a.button:hover {
   border-radius: 0;
   padding: 0;
   margin: 0; }
+
+/* Member number */
+.member-number {
+  background: url(../images/globe.png) no-repeat center center;
+  background-size: auto 85%;
+  width: 100%;
+  height: 23rem;
+  text-align: center; }
+  .member-number span {
+    text-transform: uppercase;
+    display: block; }
+    .member-number span:first-child {
+      font-size: 5rem;
+      font-weight: 600;
+      padding-top: 9rem; }
+    .member-number span:last-child {
+      font-weight: 300;
+      font-size: 1.25rem; }
