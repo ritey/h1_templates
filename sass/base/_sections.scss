@@ -9,12 +9,12 @@ section {
 	
 	&.green {
 		background: $green;
-		color: $white;
+		color: $white !important;
 	}
 	
 	&.black {
 		background: $black;
-		color: $white;
+		color: $white !important;
 	}
 
 	&.reverse {

@@ -10,12 +10,12 @@ form {
 	}
 
 	@include placeholder {
-	  color: white;
+	  color: $white;
+	  opacity: 1; 
 	}
 
 	input, select, textarea {
 		font-family: $font-family-base;
-		font-weight: 300;
 	}
 
 	input {
@@ -24,7 +24,6 @@ form {
 		padding: .4rem 1rem .25rem 1rem;
 		width: 100%;
 		color: $white;
-		text-transform: uppercase;
 
 		&:focus {
 		  outline:none;
@@ -35,11 +34,17 @@ form {
 			border: 1px solid $grey-light;
 		}
 
+		&[type="radio"], &[type="checkbox"] {
+			width: auto;
+			margin-right: .5rem;
+		}
+
 		&[type="submit"] {
 			background: $lime;
 			color: $black;
 			border: 1px solid $lime;
 			width: auto;
+			cursor: pointer;
 
 			&.search-icon {
 				background: $lime url(../images/search.svg) no-repeat center center;
@@ -51,6 +56,31 @@ form {
 			&:disabled {
 				opacity: 0.5;
 			}
+		}
+	}
+
+	textarea {
+		border: 1px solid $black;
+		background: $black;
+		padding: .4rem 1rem .25rem 1rem;
+		width: 100%;
+		color: $white;
+
+		&:focus {
+		  outline:none;
+		}
+
+		&:disabled {
+			background: $grey-light;
+			border: 1px solid $grey-light;
+		}
+	}
+
+	.inline-list {
+
+		span {
+			display: inline-block;
+			margin-right: 1rem;
 		}
 	}
 	
@@ -69,7 +99,6 @@ form {
 			border: 0;
 			-webkit-appearance: none !important;
 			color: $white;
-			text-transform: uppercase;
 
 			&:focus {
 			  outline:none;

@@ -1,0 +1,199 @@
+/* Sign up */
+
+form {
+	
+	&.sign-up {
+		max-width: 50rem;
+		margin: 0 auto;
+
+		a {
+			color: $lime !important;
+		}
+
+		label {
+			color: $white;
+			margin-bottom: 0;
+		}
+
+		p {
+			color: $white;
+
+			span {
+				text-transform: uppercase;
+				margin: 0;
+				display: inline;
+			}
+		}
+
+		div[class^="col"] {
+
+			label {
+				padding-bottom: .45rem;
+			}
+
+			@include media-breakpoint-up(md) {
+
+				label {
+					padding-top: .45rem;
+				}
+
+				p {
+					width: 90%;
+				}
+			}
+		}
+
+		.icon {
+			position: absolute;
+			width: 3.25rem;
+			height: 3.25rem;
+			background: url(../images/golf-ball.png) no-repeat center center;
+			background-size: 100% 100%;
+			z-index: 10;
+
+			&.number {
+				color: $green;
+				font-size: 3rem;
+				text-align: center;
+			}
+
+			@include media-breakpoint-up(md) {
+				width: 5.25rem;
+				height: 5.25rem;
+
+				&.number {
+					font-size: 5rem;
+				}
+			}
+
+			svg {
+				padding: .25em;
+
+				&.green {
+					fill: $green;
+				}
+			}
+		}
+
+		h2 {
+			margin: 2rem 0 0 2rem;
+			padding: 1rem;
+			background: $off-white;
+			@include border-radius(1rem);
+			display: inline-block;
+			font-weight: 400;
+			color: $green-dk;
+			z-index: 0;
+			position: relative;
+			font-size: 1rem;
+
+			@include media-breakpoint-up(md) {
+				margin: 2rem 0 0 4rem;
+				padding: 1rem 1rem 1rem 2rem;
+				font-size: 1.15rem;
+			}
+		}
+
+		.fields {
+			margin-left: 2rem;
+			z-index: 10;
+			position: relative;
+			padding: 1rem;
+			background: $green-dk;
+			@include border-radius(1rem);
+			margin-top: .5rem;
+			margin-bottom: 1rem;
+
+			@include media-breakpoint-up(md) {
+				width: 80%;
+				margin-left: 20%;
+				margin-top: -.5rem;
+				padding: 1rem 2rem;
+				margin-bottom: .5rem;
+			}
+
+			&.orange-bg {
+				background: $orange;
+			}
+
+			input, select, textarea {
+				color: $white;
+			}
+
+			textarea {
+				height: 15em;
+			}
+		}
+
+		.submit {
+			position: relative;
+			padding-top: .75rem;
+			
+			@include media-breakpoint-up(sm) {
+				margin-top: 2rem;
+			}
+			@include media-breakpoint-up(md) {
+				margin-top: 1rem;
+				margin-bottom: 5rem;
+			}
+
+			img {
+				position: absolute;
+				top: -.75rem;
+				left: -2rem;
+				height: 8rem; 
+				width: auto;
+				display: none;
+
+				@include media-breakpoint-up(sm) {
+					display: block;
+				}
+
+				@include media-breakpoint-up(md) {
+					height: 10rem; 
+					top: -1.5rem;
+					left: -4rem;
+				}
+
+				@include media-breakpoint-up(lg) {
+					height: 11rem; 
+					top: -2.5rem;
+					left: -3.75rem;
+				}
+			}
+
+			p {
+				color: $green-dk;
+				font-weight: 400;
+				padding: 1rem 4rem 1rem 1rem;
+				margin: 0 2rem;
+				background: $off-white;
+				display: block;
+				@include border-radius(1rem);
+
+				@include media-breakpoint-up(sm) {
+					margin: 1rem 2rem 1rem 6rem;
+					padding: 1rem 5rem 1rem 1rem;
+					text-align: right;
+				}
+			}
+
+			input {
+
+				&[type="submit"] {
+					font-size: 2.5rem;
+					@include border-radius(50%);
+					width: 6rem;
+					height: 6rem;
+					color: $green-dk;
+					padding: 1.7rem 0;
+					text-align: center;
+					position: absolute;
+					top: 0;
+					right: 0;
+				}
+			}
+
+		}
+	}
+}

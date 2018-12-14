@@ -24,6 +24,41 @@ a {
 			}
 
 			&.lime {
+				color: $black !important;
+				background: $lime;
+			}
+
+			&.green {
+				color: $white !important;
+				background: $green;
+			}
+
+			@include media-breakpoint-up(md) {
+				font-size: 1em;
+			}
+			@include media-breakpoint-up(lg) {
+				font-size: 1.2em;
+			}
+		}
+
+		&:focus, &:hover {
+			text-decoration: none;
+		}
+	}
+
+	span {
+
+		&.button {
+			color: $lime;
+			background: $black;
+			font-size: 0.85rem !important;
+			@include border-radius(10px);
+
+			&.large {
+				font-size: 1.25rem !important;
+			}
+
+			&.lime {
 				color: $black;
 				background: $lime;
 			}
@@ -39,10 +74,6 @@ a {
 			@include media-breakpoint-up(lg) {
 				font-size: 1.2em;
 			}
-		}
-
-		&:focus, &:hover {
-			text-decoration: none;
 		}
 	}
 }

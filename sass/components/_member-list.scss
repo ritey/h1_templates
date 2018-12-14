@@ -2,25 +2,57 @@
 
 .member-list {
 
+	.container {
+
+		> h1 {
+			text-align: center;
+			width: 100%;
+		
+			@include media-breakpoint-up(md) {
+				text-align: left;
+				padding-left: 1.55rem;
+			}
+			@include media-breakpoint-up(lg) {
+				padding-left: 1.45rem;
+			}
+			@include media-breakpoint-up(xl) {
+				padding-left: 1.15rem;
+			}
+		}
+	}
+
 	.shadow {
 		
 		@include media-breakpoint-up(sm) {
 			width: 100%;
 		}
-	}
 
-	ul {
-
-		li {
-			padding-bottom: .5rem;
-
-			&:last-child {
-				padding-bottom: 0;
-			}
+		h1 {
+			font-size: 1.25rem;
+			position: relative;
 
 			svg {
-				fill: $grey-light;
-				margin-right: .5rem;
+				position: absolute;
+				top: .1rem;
+				right: 0;
+				background: $white;
+				@include border-radius(50%);
+			}
+		}
+
+		ul {
+
+			li {
+				padding-bottom: .5rem;
+
+				&:last-child {
+					padding-bottom: 0;
+				}
+
+				svg {
+					fill: $grey-light;
+					margin-right: .5rem;
+				}
 			}
 		}
 	}

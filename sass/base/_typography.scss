@@ -71,7 +71,7 @@ $highlight-padding: 0.25em;
   .highlight {
     display: inline;
     background: $black;
-    color: $white; 
+    color: $white !important; 
     padding: $highlight-padding*1.5 $highlight-padding $highlight-padding;
     box-decoration-break: clone;
     position: relative;
@@ -81,19 +81,19 @@ $highlight-padding: 0.25em;
 
 	  &.lime {
 	    background: $lime;
-	    color: $black; 
+	    color: $black !important; 
 	    box-shadow: $highlight-padding 0 0 $lime, $highlight-padding*-1 0 0 $lime;
 	  }
 
 	  &.green {
 	    background: $green;
-	    color: $white; 
+	    color: $white !important; 
 	    box-shadow: $highlight-padding 0 0 $green, $highlight-padding*-1 0 0 $green;
 	  }
 
 	  &.white {
 	    background: $white;
-	    color: $black; 
+	    color: $black !important; 
 	    box-shadow: $highlight-padding 0 0 $white, $highlight-padding*-1 0 0 $white;
 	  }
   }
