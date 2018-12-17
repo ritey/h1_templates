@@ -15,8 +15,8 @@
 </head>
 <body>
 
-<header class="clearfix">
-  <div class="hero-container homepage">
+<header class="clearfix homepage">
+  <div class="hero-container">
     <div class="hero-desk-left-bg"></div>
     <div class="hero text-center">
       <div class="container px-4">
@@ -263,6 +263,17 @@
   svg4everybody();
 
   $(document).ready(function(){
+
+    var stickyNav = $('header nav').offset().top;
+
+    $(window).scroll(function() {  
+        if ($(window).scrollTop() > stickyNav) {
+            $('header nav').addClass('fix');
+        }
+        else {
+            $('header nav').removeClass('fix');
+        }  
+    });
 
     $('.cta').slick({
       dots: true,

@@ -3,10 +3,16 @@
 header {
 	background: $white;
 	color: $black;
+	padding-top: 3.5rem;
+	position: relative;
 
 	nav {
 		background: $black;
 		width: 100%;
+		position: fixed;
+		top: 0;
+		left: 0;
+		z-index: 1000;
 
 		.icon-logo {
 			width: 3.75rem;
@@ -151,6 +157,23 @@ header {
 					height: 1.75rem;
 					margin-top: .975rem;
 				}
+			}
+		}
+	}
+
+	&.homepage {
+		padding-top: 0;
+		padding-bottom: 3.5rem;
+
+		nav {
+			top: auto;
+			bottom: 0;
+			position: absolute;
+
+			&.fix {
+				top: 0;
+				bottom: auto;
+				position: fixed;
 			}
 		}
 	}
