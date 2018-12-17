@@ -10,7 +10,7 @@ form {
 	}
 
 	@include placeholder {
-	  color: $white;
+	  color: $grey;
 	  opacity: 1; 
 	}
 
@@ -19,11 +19,10 @@ form {
 	}
 
 	input {
-		border: 1px solid $black;
-		background: $black;
+		border: 1px solid $white;
+		background: $white;
 		padding: .4rem 1rem .25rem 1rem;
 		width: 100%;
-		color: $white;
 
 		&:focus {
 		  outline:none;
@@ -60,11 +59,8 @@ form {
 	}
 
 	textarea {
-		border: 1px solid $black;
-		background: $black;
 		padding: .4rem 1rem .25rem 1rem;
 		width: 100%;
-		color: $white;
 
 		&:focus {
 		  outline:none;
@@ -87,10 +83,10 @@ form {
 	.styled-select {
 		width: 100%;
 		overflow: hidden;
-		background: $black url(../images/arrow-down.svg) no-repeat right center;
-		background-size: auto 30%;
-		border: 1px solid $black;
-		border-right: 1rem solid $black;
+		background: $white url(../images/arrow-down.svg) no-repeat right center;
+		background-size: auto 30% !important;
+		border: 1px solid $white;
+		border-right: 1rem solid $white;
 
 		select {
 			background: transparent;
@@ -98,10 +94,19 @@ form {
 			padding: .4rem 1rem .25rem 1rem;
 			border: 0;
 			-webkit-appearance: none !important;
-			color: $white;
 
 			&:focus {
 			  outline:none;
+			}
+		}
+
+		&.black {
+			border: 1px solid $black;
+			border-right: 1rem solid $black;
+			background: $black url(../images/arrow-down-lime.svg) no-repeat right center;
+
+			select {
+				color: $white;
 			}
 		}
 

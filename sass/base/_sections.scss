@@ -2,9 +2,12 @@
 
 section {
 	
+	&.grey-light {
+		background: $grey-light;
+	}
 	
 	&.grey {
-		background: $grey-light;
+		background: $grey;
 	}
 	
 	&.green {
@@ -26,6 +29,10 @@ section {
 				flex-direction: row;
 			}
 		}
+	}
+
+	&.profile-nav {
+		background: $green-lawn;
 	}
 
 	&.img-bg {

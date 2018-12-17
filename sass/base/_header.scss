@@ -1,6 +1,8 @@
 /* Header */
 
 header {
+	background: $white;
+	color: $black;
 
 	nav {
 		background: $black;
@@ -89,8 +91,8 @@ header {
 
 		a {
 
-			&.login {
-				padding-top: 0.95rem;
+			&.login, &.messages {
+				padding-top: 1rem;
 				color: $lime;
 				font-weight: 300;
 
@@ -98,9 +100,9 @@ header {
 					text-decoration: none;
 				}
 
-				.icon-user {
-					width: 1.4rem;
-					height: 1.625rem;
+				.icon {
+					width: 1.2rem;
+					height: 1.425rem;
 					fill: $lime;
 				}
 
@@ -110,6 +112,34 @@ header {
 
 					@include media-breakpoint-up(md) {
 						display: inline-block;
+					}
+				}
+			}
+
+			&.messages {
+				position: relative;
+
+				.icon {
+					width: 1.525rem;
+					height: 1.3rem;
+					fill: $white;
+				}
+
+				span {
+					display: inline-block;
+
+					&.notification {
+						position: absolute;
+						top: 0.5rem;
+						left: 0.25rem;
+						width: 1.25rem;
+						height: 1.25rem;
+						padding-top: .2rem;
+						background: $lime;
+						color: $black;
+						text-align: center;
+						@include border-radius(50%);
+						font-weight: 400;
 					}
 				}
 			}

@@ -6,6 +6,10 @@ form {
 		max-width: 50rem;
 		margin: 0 auto;
 
+		@include placeholder {
+		  color: $white;
+		}
+
 		a {
 			color: $lime !important;
 		}
@@ -118,10 +122,22 @@ form {
 
 			input, select, textarea {
 				color: $white;
+				background: $black;
+				border: 1px solid $black;
 			}
 
 			textarea {
 				height: 15em;
+			}
+
+			.styled-select {
+				border: 1px solid $black;
+				border-right: 1rem solid $black;
+				background: $black url(../images/arrow-down-lime.svg) no-repeat right center;
+
+				select {
+					color: $white;
+				}
 			}
 		}
 

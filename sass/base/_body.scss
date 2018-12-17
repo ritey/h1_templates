@@ -1,7 +1,8 @@
 /* Body */
 
 body {
-	color: $black;
+	color: $white;
+	background: $grey;
 	font-family: $font-family-base;
 	line-height: 1.25;
 }
@@ -11,4 +12,9 @@ body {
 	@include media-breakpoint-up(lg) {
 		max-width: 62rem;
 	}
+}
+
+main {
+	color: $black;
+	background: $white;
 }
