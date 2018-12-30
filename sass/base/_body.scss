@@ -1,8 +1,7 @@
 /* Body */
 
 body {
-	color: $white;
-	background: $grey;
+	color: $black;
 	font-family: $font-family-base;
 	line-height: 1.25;
 }
@@ -14,7 +13,6 @@ body {
 	}
 }
 
-main {
-	color: $black;
-	background: $white;
+.highlight:hover {
+	box-shadow: 7px 18px 34px -10px rgba(0,0,0,.9);
 }
