@@ -15,7 +15,7 @@
 		z-index: 100;
 
 		&.slick-prev {
-			background-image: url(../images/arrow-left.svg);
+			background-image: url(/h1/images/arrow-left.svg);
 			left: 0;
 
 			@include media-breakpoint-up(md) {
@@ -29,7 +29,7 @@
 			}
 		}
 		&.slick-next {
-			background-image: url(../images/arrow-right.svg);
+			background-image: url(/h1/images/arrow-right.svg);
 			right: 0;
 
 			@include media-breakpoint-up(md) {

@@ -6,10 +6,6 @@ form {
 		max-width: 50rem;
 		margin: 0 auto;
 
-		@include placeholder {
-		  color: $white;
-		}
-
 		a {
 			color: $lime !important;
 		}
@@ -51,7 +47,7 @@ form {
 			position: absolute;
 			width: 3.25rem;
 			height: 3.25rem;
-			background: url(../images/golf-ball.png) no-repeat center center;
+			background: url(/h1/images/golf-ball.png) no-repeat center center;
 			background-size: 100% 100%;
 			z-index: 10;
 
@@ -122,22 +118,10 @@ form {
 
 			input, select, textarea {
 				color: $white;
-				background: $black;
-				border: 1px solid $black;
 			}
 
 			textarea {
 				height: 15em;
-			}
-
-			.styled-select {
-				border: 1px solid $black;
-				border-right: 1rem solid $black;
-				background: $black url(../images/arrow-down-lime.svg) no-repeat right center;
-
-				select {
-					color: $white;
-				}
 			}
 		}
 

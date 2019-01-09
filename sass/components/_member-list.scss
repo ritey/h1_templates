@@ -27,6 +27,14 @@
 			width: 100%;
 		}
 
+		svg.icon-howdid {
+			position: absolute;
+			top: 80px;
+			right: 10px;
+			background: $white;
+			@include border-radius(50%);
+		}
+
 		h1 {
 			font-size: 1.25rem;
 			position: relative;
